@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class TargetLocater : MonoBehaviour
@@ -13,13 +14,15 @@ public class TargetLocater : MonoBehaviour
         target = FindObjectOfType<EnemyMover>().transform;
     }
 
+    
+
     // Update is called once per frame
     void Update()
     {
         AimWepon();
     }
 
-    private void AimWepon()
+    void AimWepon()
     {
         weapon.LookAt(target);
     }
